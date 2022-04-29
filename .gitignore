@@ -1,0 +1,16 @@
+/package-lock.json
+/package.vorlage.json
+/node_modules
+.DS_Store
+_bak
+*_bak*
+/build/bootstrap.html
+/build/styles.html
+.vscode/settings.json
+build/_src-r4
+build/test.html
+build/test_1.html
+build/img
+build/css
+build/js
+build/menu-boxed.html

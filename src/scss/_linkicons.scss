@@ -1,0 +1,220 @@
+a { 
+	// set underline on icons for msie
+	&:before { text-decoration:underline; }
+	&:before { text-decoration:none; }
+	
+	&.link { 
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-link;
+			left: 0;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+
+	// icon zum siwf external website?()
+	&.external {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+		
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-external;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+		
+	}
+
+	// download
+	&.download {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-download;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+
+	// more (show more)
+	&.more {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-more;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+
+	// more (show less)
+	&.less {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-less;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+
+	// more (show more)
+	&.more-lg {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover {
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-more-lg;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+
+	// more (show less)
+	&.less-lg {
+		display: inline-block; // block;
+		position: relative;
+		margin-left: 42px;
+		@include media-breakpoint-down(md) {
+			margin-left: 36px;
+		}
+		text-decoration: none;
+
+		&:hover {
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			&:before {
+				color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			}
+		}
+
+		&:before {
+			@extend .icon-less-lg;
+			left: -3px;
+			color: $color-fmhblau;
+			margin-left: -42px; // same as padding-left set on li
+			width: 42px; // same as padding-left set on li
+			@include media-breakpoint-down(md) {
+				margin-left: -36px; // same as padding-left set on li
+				width: 36px; // same as padding-left set on li
+			}
+		}
+	}
+}

@@ -1,0 +1,470 @@
+
+/* expandable wrapper */
+
+.akkordeon {
+    border-bottom: 1px solid $color-hellblau;
+
+}
+
+/* expandable */
+
+.exp {
+    position: relative;
+    border-top: 1px solid $color-hellblau;
+
+    // print version
+    @media print {
+        // page-break-after: always; // seitenwechsel nach expandable für print
+        padding-bottom: 2em;
+    }
+
+    // title (beide hierarchien wegen gliederung)
+    > .cms-object-wrp > h2,
+    > .cms-object-wrp > h3,
+    > h2,
+    > h3 {
+        position: relative;
+        @extend .ut;
+        margin: 0;
+		padding: 21px 42px 21px 16px;
+        @include media-breakpoint-down(md) {
+            padding-right: 36px;
+        }
+        font-weight: 400;
+        cursor: pointer;
+
+        &:hover {
+            color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+            &:after {
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+            }
+        }
+
+        &:after {
+            @extend .icon-more;
+            color: $color-fmhblau;
+            right: 0;
+            margin-top: 23px;
+            @include media-breakpoint-down(md) {
+                margin-top: 21px;
+            }
+        }
+    }
+
+    // anchor
+    &-a {
+        position: absolute;
+        top: -50px;
+    }
+
+    // content
+    &-cnt {
+        margin: 0 16px;
+        overflow: hidden;
+        max-height: 1px;
+        opacity: 0;
+        transition: all 0;
+
+        @media print {
+            overflow: visible;
+            max-height: 9999px;
+            opacity: 1;
+        }
+
+    }
+
+    // open status
+    &.open {
+
+        > .cms-object-wrp > h2,
+        > .cms-object-wrp > h3,
+	> h2,
+        > h3 {
+            color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+            &:after {
+                @extend .icon-less;
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                right: 0;
+                margin-top: 23px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 21px;
+                }
+            }
+        }
+
+        .exp-cnt {
+            padding-top: 55px; // für animation beim öffnen (bisher 30px)
+            padding-bottom: 55px;
+            overflow: visible;
+            max-height:9999px;
+            opacity: 1;
+            transition: all 0.9s ease; // 0.7s
+
+            > p:first-child,
+            > div:first-child {
+                margin-top: -30px;
+            }
+        }
+    }
+
+    // download file
+    &-file {
+        border-top: 1px solid $color-hellblau;
+
+        a {
+            display:block;
+            position: relative;
+
+            @extend .ut;
+            margin: 0;
+            padding: 21px 42px 21px 16px;
+            @include media-breakpoint-down(md) {
+                padding-right: 36px;
+            }
+            font-weight: 400;
+            text-decoration: none;
+            &:hover {
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                &:after {
+                    color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                }
+            }
+
+            &:after {
+                @extend .icon-download;
+                color: $color-fmhblau;
+                right: 0;
+                margin-top: 23px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+
+    // internal link
+    &-link {
+        border-top: 1px solid $color-hellblau;
+
+        a {
+            display:block;
+            position: relative;
+
+            @extend .ut;
+            margin: 0;
+            padding: 21px 42px 21px 16px;
+            @include media-breakpoint-down(md) {
+                padding-right: 36px;
+            }
+            font-weight: 400;
+            text-decoration: none;
+            &:hover {
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                &:after {
+                    color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                }
+            }
+
+            &:after {
+                @extend .icon-link;
+                color: $color-fmhblau;
+                right: 0;
+                margin-top: 23px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+
+    // external link
+    &-extlink {
+        border-top: 1px solid $color-hellblau;
+
+        a {
+            display:block;
+            position: relative;
+
+            @extend .ut;
+            margin: 0;
+            padding: 21px 42px 21px 16px;
+            @include media-breakpoint-down(md) {
+                padding-right: 36px;
+            }
+            font-weight: 400;
+            text-decoration: none;
+            &:hover {
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                &:after {
+                    color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                }
+            }
+
+            &:after {
+                @extend .icon-external;
+                color: $color-fmhblau;
+                right: 0;
+                margin-top: 23px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+
+    // siwf-abc, society, cantonal society
+    &.abc, &-file.abc, &-extlink.abc, &-link.abc,
+    &.soc, &-file.soc, &-extlink.soc, &-link.soc,
+    &.c-soc, &-file.c-soc, &-extlink.c-soc, &-link.c-soc {
+        .alpha {
+            width: 108px;
+            padding-left: 16px;
+            padding-top: 21px;
+            font-size: 20px;
+            font-weight: 900;
+            position: absolute;
+            color: $color-siwf-goldgelb;
+            @include media-breakpoint-down(md) {
+                width: 36px;
+                font-size: 13px;
+                line-height: 28px;
+            }
+        }
+
+        .society {
+            width: 108px;
+            padding-left: 16px;
+            padding-top: 21px;
+            font-size: 20px;
+            font-weight: 900;
+            position: absolute;
+            color: $color-siwf-goldgelb;
+            @include media-breakpoint-down(md) {
+                width: 36px;
+                font-size: 13px;
+                line-height: 28px;
+                padding-left: 7px;
+            }
+        }
+
+        .c-society {
+            width: 78px;
+            padding-left: 16px;
+            padding-top: 21px;
+            // font-size: 20px;
+            // font-weight: 900;
+            line-height: 28px;
+            position: absolute;
+            // color: $color-siwf-goldgelb;
+            @include media-breakpoint-down(md) {
+                width: 36px;
+                font-size: 13px;
+                line-height: 28px;
+                padding-left: 7px;
+            }
+        }
+
+        > h2,
+        > h3 {
+            text-align: left;
+            padding-left: 124px;
+            // font-weight: 700;
+            @include media-breakpoint-down(md) {
+                padding-left: 52px;
+            }
+        }
+
+        h4 {
+            @extend .bt;
+            color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+            margin-top: 32px;
+            margin-bottom: 30px;
+        }
+
+        .cnt, .exp-cnt {
+            padding-left:108px;
+            @include media-breakpoint-down(md) {
+                padding-left: 36px;
+            }
+        }
+
+        .cnt > a {
+            b { font-weight: 700; }
+            &:after {
+                margin-top:-12px;
+                top: 50%;
+            }
+        }
+
+        ol, ul { margin-left: 2px; }
+    }
+
+    // only siwf-abc
+    &.abc, &-file.abc, &-extlink.abc, &-link.abc {
+
+        h3 {
+            padding-left: 124px;
+            font-weight: 700;
+            @include media-breakpoint-down(md) {
+                padding-left: 52px;
+            }
+        }
+    }
+
+    // only cantonal society
+    &.c-soc, &-file.c-soc, &-extlink.c-soc, &-link.c-soc {
+
+        h2 {
+            padding-left: 94px;
+            // font-weight: 700;
+            @include media-breakpoint-down(md) {
+                padding-left: 62px;
+            }
+        }
+
+        .cnt, .exp-cnt {
+            padding-left:78px;
+            @include media-breakpoint-down(md) {
+                padding-left: 46px;
+            }
+        }
+    }
+
+    // only society
+
+    &.soc, &-file.soc, &-extlink.soc, &-link.soc {
+        h2 {
+            @include media-breakpoint-down(md) {
+                padding-left: 35px;
+            }
+        }
+
+        .cnt, .exp-cnt {
+            @include media-breakpoint-down(md) {
+                padding-left: 19px;
+            }
+        }
+    }
+
+
+    // only society, cantonal society
+    &.soc, &-file.soc, &-extlink.soc, &-link.soc,
+    &.c-soc, &-file.c-soc, &-extlink.c-soc, &-link.c-soc {
+        &.open .exp-cnt {
+            padding-bottom: 35px;
+        }
+        .exp-cnt {
+            h3 {
+                @extend .ut;
+                margin-bottom: 8px;
+            }
+
+            .abschnitt {
+                margin-bottom: 40px;
+            }
+        }
+
+    }
+
+    // portrait
+    &.portrait {
+        padding: 21px 0;
+        min-height: 218px;
+
+        img {
+            position: absolute;
+            width: 176px;
+            left:0;
+            top: 21px;
+            @include media-breakpoint-down(sm) {
+                display:none;
+            }
+        }
+
+        h3 {
+            @extend .bt;
+            color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+        }
+
+        .cv {
+            padding-left: 216px;
+        }
+
+        .port-more {
+            position: absolute;
+            bottom: 21px;
+            left: 216px;
+        }
+
+        p.more, p.less {
+            margin: 0;
+            @extend .btx;
+            margin-left: -15px;
+            a {
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+                &:before {
+                    font-size: 26px;
+                    line-height: 19px;
+                    margin-left: -28px; // same as padding-left set on li
+                    width: 28px; // same as padding-left set on li
+                }
+            }
+        }
+
+        p.more {
+            margin-top: 20px;
+            @include media-breakpoint-down(sm) {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+        p.less {
+            display: none;
+        }
+
+        .exp-cnt {
+            margin: -12px 0 0 0; // -30px 0 0 0
+        }
+
+        @include media-breakpoint-down(sm) {
+            .cv {
+                padding-left: 0;
+            }
+            .port-more {
+                position: relative;
+                bottom: inherit;
+                left: inherit;
+            }
+        }
+
+        &.open {
+
+            @include media-breakpoint-down(sm) {
+                img {
+                    display: block;
+                    position: relative;
+                    left: inherit;
+                    top: inherit;
+                    width: 100%;
+                }
+            }
+
+            p.more {
+                display: none;
+            }
+
+            p.less {
+                display: block;
+            }
+
+            .exp-cnt {
+                margin: -48px 0 3em 0;
+            }
+
+        }
+
+
+    }
+}

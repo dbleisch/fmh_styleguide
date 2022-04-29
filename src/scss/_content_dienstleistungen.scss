@@ -1,0 +1,285 @@
+// dienstleistungen service boxen
+.services {
+    padding-bottom: 24px;
+    @include media-breakpoint-down(md) {
+        padding-bottom: 0;
+    }
+
+    .sbox {
+        background-color: $color-weiss;
+        border-top: 7px solid $color-weiss;
+        margin-bottom: 96px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 60px;
+        }
+
+        padding: 20px 40px 20px 40px;
+        div.icon {
+            position: relative;
+            margin: 0 auto;
+            width: 116px;
+            height: 116px;
+            border-radius: 58px;
+            margin-top: -82px;
+            line-height: 120px;
+            text-align: center;
+            @include media-breakpoint-down(md) {
+                width: 88px;
+                height: 88px;
+                border-radius: 44px;
+                margin-top: -69px;
+            }
+            span {
+                font-size: 116px;
+                line-height: 116px;
+                @include media-breakpoint-down(md) {
+                    font-size: 90px;
+                    line-height: 88px;
+                }
+                color: $color-weiss;
+            }
+        }
+
+        h2 {
+            @extend .ltx;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 1.2em;
+        }
+
+        p.mail {
+            @extend .ltx;
+            a {
+                text-decoration: none;
+                &:link { color: $color-dunkelgrau; }
+                &:hover { color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb); }
+            }
+            text-align: center;
+        }
+
+        div.more-cnt {
+            max-height:1px;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0;
+
+            @media print {
+                overflow: auto;
+                max-height: 9999px;
+            }
+
+            p {
+                font-size: 16px;
+                a.link {
+                    line-height: 18px;
+                    margin-left: 52px;
+                    &:before {
+                        margin-left: -52px;
+                        width: 52px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            &.open {
+                @include media-breakpoint-up(lg) {
+                    min-height: 332px;
+                }
+                max-height: 9999px;
+                overflow: auto;
+                opacity: 1;
+                transition: all 0.9s ease; // 0.7s
+                /*
+                -webkit-transition: opacity 250ms ease, max-height 500ms ease, visibility 0s linear 0s, top 0s linear 0s;
+                    -moz-transition: opacity 250ms ease, max-height 500ms ease, visibility 0s linear 0s, top 0s linear 0s;
+                    -ms-transition: opacity 250ms ease, max-height 500ms ease, visibility 0s linear 0s, top 0s linear 0s;
+                    -o-transition: opacity 250ms ease, max-height 500ms ease, visibility 0s linear 0s, top 0s linear 0s;
+                        transition: opacity 250ms ease, max-height 500ms ease, visibility 0s linear 0s, top 0s linear 0s;
+                */
+            }
+        }
+
+        p.more, p.less {
+            @extend .btx;
+            text-align: center;
+            margin-left: -15px;
+            a {
+                text-decoration: none;
+                &:before {
+                    font-size: 24px;
+                    line-height: 19px;
+                    margin-left: -35px; // same as padding-left set on li
+                    width: 35px; // same as padding-left set on li
+                }
+            }
+        }
+
+        p.more {
+            margin-top: 20px;
+            @include media-breakpoint-down(md) {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        }
+
+        p.less {
+            display: none;
+        }
+
+        border-color: #3c5587;
+        div.icon { background-color: #3c5587; }
+
+        &.bluegray {
+            border-color: #8a9cbd;
+            div.icon { background-color: #8a9cbd; }
+        }
+        &.gold {
+            border-color: #cda028;
+            div.icon { background-color: #cda028; }
+        }
+
+        &.blue:hover,
+        &.bluegray:hover,
+        &.gold:hover,
+        &.open,
+        &.open.blue,
+        &.bluegray.blue,
+        &.gold.blue,
+        &:hover {
+            border-color: $color-fmh-goldgelb;
+            div.icon { background-color: $color-fmh-goldgelb; }
+        }
+
+        &.blue {
+            border-color: #3c5587;
+            div.icon { background-color: #3c5587; }
+        }
+
+        &.gesundheitspolitik {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_gesundheitspolitik;
+                }
+            }
+        }
+
+        &.ambulante_tarife {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_ambulante_tarife;
+                }
+            }
+        }
+        &.arztpraxis_mpa {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_arztpraxis_mpa;
+                }
+            }
+        }
+        &.berufsentwicklung_b {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_berufsentwicklung_b;
+                }
+            }
+        }
+        &.e-health {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_e-health;
+                }
+            }
+        }
+        &.gesundheitspolitik {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_gesundheitspolitik;
+                }
+            }
+        }
+        &.public_health {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_public_health;
+                }
+            }
+        }
+        &.qualitaet {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_qualitaet;
+                }
+            }
+        }
+        &.recht {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_recht;
+                }
+            }
+        }
+        &.stationaere_tarife {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_stationaere_tarife;
+                }
+            }
+        }
+        &.statistik {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_statistik;
+                }
+            }
+        }
+        &.vernetzung_support {
+            div.icon {
+                span {
+                    // font-size: 115px;
+                    @extend .icon-dl_vernetzung_support;
+                }
+            }
+        }
+        &.fmh-services {
+            div.icon {
+                span {
+                    font-size: 110px;
+                    line-height: 110px;
+                    @extend .icon-dl_fmh_services;
+                    @include media-breakpoint-down(md) {
+                        font-size: 80px;
+                        line-height: 80px;
+                    }
+                }
+            }
+        }
+        &.kommunikation {
+            div.icon {
+                span {
+                    @extend .icon-dl_kommunikation;
+                    @include media-breakpoint-down(md) {
+                        font-size: 80px;
+                        line-height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}

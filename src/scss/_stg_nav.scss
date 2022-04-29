@@ -1,0 +1,174 @@
+#sidenav {
+	position: relative;
+	margin-bottom: -60px;
+
+	// padding: 5px;
+
+	.toggle {
+		display: none;
+		cursor: pointer;
+		z-index: 99;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+			position: absolute;
+			padding-top: 11px;
+			text-align: center;
+			right: 0;
+			background-color: $color-hellblau;
+			width: 50px;
+			height: 50px;
+		}
+		svg {
+			fill: $color-dunkelblau;
+			width: 24px;
+			height: auto;
+		}
+	}
+}
+
+/* left navigation */
+.sidenav {
+	position: sticky;
+    top: 50px;
+    align-self: flex-start;
+	margin-top: -9px;
+	transition: max-height opacity 0.9s ease;
+	@include media-breakpoint-up(lg) {
+		max-width: 360px;
+		margin-bottom: 100px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding-right: 50px;
+	}
+	@include media-breakpoint-down(md) {
+		max-height: 1px;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0;
+		padding-bottom: 0;
+	}
+
+	&.open {
+		margin: 0 -15px 80px -15px;
+		position: relative;
+		top: 50px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		padding: 40px;
+		background-color: $color-hellblau;
+		max-height: 9999px;
+		overflow: auto;
+		opacity: 1;
+		transition: max-height opacity 0.9s ease;
+		padding-bottom: 38px;
+		z-index: 99;
+	}
+
+
+    .panel {
+
+        position: relative;
+		padding: 0; // 40px;
+		border-bottom: 1px solid #f4f4f4;
+
+        h2 {
+            @extend .bt;
+            margin-top: 20px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+			text-align: left;
+			font-size: 13px;
+			margin: 20px 30px 18px 0;
+			a { text-decoration: none; }
+        }
+
+        .cnt {
+			max-height: 1px;
+			overflow: hidden;
+			opacity: 0;
+			transition: all 0;
+			padding-bottom: 0;
+
+            .link {
+                font-size: 15px;
+				&:before {
+					top: 1px;
+				}
+				&.act {
+					&:before {
+						color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+					}
+				}
+            }
+        }
+
+        p {
+            margin-bottom: 28px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .mob-exp {
+			position: absolute;
+			cursor: pointer;
+            top: -5px;
+            right: 0;
+			left: 0;
+            height: 25px; // 52px;
+        }
+
+        div.more, div.less {
+            position: absolute;
+			display: none;
+			top: 3px; // 18px;
+			right: 18px; // 23px;
+			background-color: $color-fmhblau;
+            border-radius: 9px;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+			line-height: 16px;
+
+            a {
+				color: $color-weiss;
+                display: block;
+                width: 18px;
+                height: 18px;
+                text-decoration: none;
+            }
+        }
+
+        div.more {
+            display: block;
+		}
+
+        &.open {
+			.cnt {
+				max-height: 9999px;
+				overflow: auto;
+				opacity: 1;
+				transition: all 0.9s ease;
+				padding-bottom: 38px;
+			}
+			div.more {
+				display: none;
+			}
+			div.less {
+				display: block;
+			}
+		}
+    }
+
+	&.tardoc {
+		.panel,
+		.panel.open {
+			.mob-exp {
+				left: inherit;
+				width: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.cms-object-wrp .cms-object-status, .cms-object-wrp .cms-subobject-status, .cms-object-wrp .cms-instance-status, .cms-object-wrp .cms-object-info {
+    width: 20px;
+}
+
+.cms-object-wrp .object-status-changed { // switched to #ffcf4d
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+IDxwYXRoIGZpbGw9JyNmZmNmNGQnIGQ9J00xMiwyQzYuNDc3LDIsMiw2LjQ3NywyLDEyYzAsNS41MjMsNC40NzcsMTAsMTAsMTBjNS41MjMsMCwxMC00LjQ3NywxMC0xMEMyMiw2LjQ3NywxNy41MjMsMiwxMiwyeicvPiA8L3N2Zz4=) no-repeat center center;
+}
+
+.con-object-status-changed {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCc+IDxwYXRoIGZpbGw9JyNmZmNmNGQnIGQ9J00xMiwyQzYuNDc3LDIsMiw2LjQ3NywyLDEyYzAsNS41MjMsNC40NzcsMTAsMTAsMTBjNS41MjMsMCwxMC00LjQ3NywxMC0xMEMyMiw2LjQ3NywxNy41MjMsMiwxMiwyeicvPiA8L3N2Zz4=) no-repeat 50%;
+}
+
+.jstree-contens .page-status-changed { // switched to #ffcf4d
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNCAxNyc+IDxnPiA8cmVjdCB4PScwLjUnIHk9JzAuNScgZmlsbD0nI2ZmY2Y0ZCcgd2lkdGg9JzEzJyBoZWlnaHQ9JzE2Jy8+IDxyZWN0IHg9JzAuNScgeT0nMC41JyBmaWxsPSdub25lJyBzdHJva2U9JyNmZmNmNGQnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgd2lkdGg9JzEzJyBoZWlnaHQ9JzE2Jy8+IDwvZz4gPC9zdmc+);
+}
+
+.cms-object-context-icon {
+    width: 20px;
+}
+
+.location {
+    color:silver !important;
+    font-size:0.8em !important;
+    margin-bottom:0 !important;
+}
+
+/* ckeditor */
+
+.cke_button__source_label, .cke_button__sourcedialog_label {
+    display: none;
+}
+
+/*
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'> <path fill='#fce232' d='M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10c5.523,0,10-4.477,10-10C22,6.477,17.523,2,12,2z'/> </svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 17'> <g> <rect x='0.5' y='0.5' fill='#fce232' width='13' height='16'/> <rect x='0.5' y='0.5' fill='none' stroke='#fce232' stroke-miterlimit='10' width='13' height='16'/> </g> </svg>
+*/

@@ -1,0 +1,172 @@
+
+.nwsl-ticker {
+    background-color: $color-taubenblau;
+    background-image:  url('/_src-r4/img/background-aktuell.png');
+    background-position: center;
+    background-size: cover;
+
+    .wrp {
+        h2 {
+            color: $color-weiss;
+            padding: 63px 0 48px 0;
+        }
+    }
+
+    .glide_wrp {
+        padding: 0 0 122px 0;
+        @include media-breakpoint-down(md) {
+            margin: 0 -15px 0 -15px;
+        }
+        @include media-breakpoint-up(md) {
+            padding: 0 50px 122px 50px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 0 50px 122px 50px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding: 0 100px 122px 100px;
+        }
+        @media (min-width: 1320px) {
+            padding: 0 130px 122px 130px;
+        }
+        @media (min-width: 1440px) {
+            padding: 0 160px 122px 160px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nwsl {
+        position: relative;
+
+        h3.tt {
+            color: $color-fmhblau;
+            -moz-hyphens: auto;
+            -o-hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            @include media-breakpoint-down(md) {
+                font-size: 19px;
+                line-height: 25px;
+            }
+        }
+
+        p {
+            @extend .ltx;
+            -moz-hyphens: auto;
+            -o-hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            @include media-breakpoint-down(md) {
+                font-size: 14px;
+            }
+        }
+        p.mtx { font-size: 13px; margin-bottom:20px; }
+
+        &:hover {
+            a {
+                color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                &:before {
+                    color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+                }
+            }
+        }
+
+        .continue {
+            display: block;
+            position: absolute;
+            bottom: 20px;
+            margin:0;
+        }
+    }
+}
+
+// glider styles
+.glide {
+    // padding-bottom: 45px;
+    margin-right: 10px;
+    &__slide {
+        padding: 0 7px 7px 0;
+        .nwsl {
+            padding: 30px 25px;
+            background-color: $color-weiss;
+            box-shadow: 7px 7px rgba($color-fmhblau, 0.8);
+            height: 395px;
+            &:hover {
+                background-color: $color-weiss;
+                box-shadow: 7px 7px rgba(if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb), 0.8);
+                height: 395px;
+            }
+        }
+    }
+    &__arrow {
+        box-shadow: none;
+        border: none;
+        text-shadow: none;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+        .icon-link-arrow {
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            font-size: 32px;
+            line-height: 24px;
+            color: $color-weiss;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        &--left {
+            margin-left:-108px;
+            @include media-breakpoint-up(xl) {
+                margin-left:-168px;
+            }
+            margin-top:-19px;
+            transform: rotate(180deg);
+            .icon-link-arrow {
+
+            }
+        }
+        &--right {
+            margin-right:-108px;
+            @include media-breakpoint-up(xl) {
+                margin-right:-168px;
+            }
+            .icon-link-arrow {
+
+            }
+        }
+    }
+    &__bullets {
+        margin-bottom:-87px;
+        // background-color: blue;
+    }
+
+    &__bullet {
+        // display: inline-block;
+        box-sizing: content-box;
+        width: 14px;
+        height: 14px;
+        background-color: $color-weiss;
+        border: 2px solid $color-taubenblau;
+        box-shadow: none;
+        &--active {
+            width: 14px;
+            height: 14px;
+            background-color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+            border: 2px solid $color-weiss;
+        }
+        &:hover, &:focus {
+            border: 2px solid $color-weiss;
+            background-color: rgba($color-weiss, 0.5);
+        }
+    }
+}

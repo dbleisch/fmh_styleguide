@@ -1,0 +1,148 @@
+.droopmenu-toggle {
+	width: 50px;
+	height: 40px;
+	line-height: 40px;
+	-webkit-transition: background-color .3s;
+	-moz-transition: background-color .3s;
+	transition: background-color .3s;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
+	display: none;
+	float: right;
+	right: -4px;
+	top: 16px;
+}
+
+.droopmenu-toggle i {
+	width: 26px;
+	height: 2px;
+	display: block;
+	position: relative;
+	-webkit-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	-moz-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	-o-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	margin-bottom: 6px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* animation on hover */
+/*
+	.droopmenu-toggle .dm-burg:nth-child(2) { opacity: 1; }
+	.droopmenu-toggle .dm-burg:nth-child(2):after,
+	.droopmenu-toggle .dm-burg:nth-child(2):before {
+		-webkit-transition: -webkit-transform .4s cubic-bezier(.18, .65, .65, 1.4) .1s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .08s;
+		-moz-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .1s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .08s;
+		-o-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .1s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .08s;
+		transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .1s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .08s;
+	}
+	
+	.droopmenu-toggle .dm-burg:nth-child(1) {
+		-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-moz-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-ms-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-o-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg)
+	}
+	
+	.droopmenu-toggle .dm-burg:nth-child(1):after,
+	.droopmenu-toggle .dm-burg:nth-child(1):before {
+		-webkit-transition: -webkit-transform .4s cubic-bezier(.18, .65, .65, 1.4), opacity .3s cubic-bezier(.18, .65, .65, 1.4);
+		-moz-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4), opacity .3s cubic-bezier(.18, .65, .65, 1.4);
+		-o-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4), opacity .3s cubic-bezier(.18, .65, .65, 1.4);
+		transition: transform .4s cubic-bezier(.18, .65, .65, 1.4), opacity .3s cubic-bezier(.18, .65, .65, 1.4)
+	}
+	
+	.droopmenu-toggle .dm-burg:nth-child(3) {
+		-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-moz-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-ms-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		-o-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg)
+	}
+	
+	.droopmenu-toggle .dm-burg:nth-child(3):after,
+	.droopmenu-toggle .dm-burg:nth-child(3):before {
+		-webkit-transition: -webkit-transform .4s cubic-bezier(.18, .65, .65, 1.4) .2s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .18s;
+		-moz-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .2s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .18s;
+		-o-transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .2s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .18s;
+		transition: transform .4s cubic-bezier(.18, .65, .65, 1.4) .2s, opacity .3s cubic-bezier(.18, .65, .65, 1.4) .18s
+	}
+*/
+
+.droopmenu-toggle i:after,
+.droopmenu-toggle i:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	pointer-events: none;
+	background: $droopmenu-color-panel-bg;	
+}
+
+.droopmenu-toggle i:before {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-moz-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0)
+}
+
+.droopmenu-toggle i:after {
+	opacity: 0;
+	-webkit-transform: translate3d(50%, 0, 0);
+	-moz-transform: translate3d(50%, 0, 0);
+	-ms-transform: translate3d(50%, 0, 0);
+	-o-transform: translate3d(50%, 0, 0);
+	transform: translate3d(50%, 0, 0)
+}
+
+.droopmenu-toggle:hover i:before {
+	opacity: 0;
+	-webkit-transform: translate3d(-50%, 0, 0);
+	-moz-transform: translate3d(-50%, 0, 0);
+	-ms-transform: translate3d(-50%, 0, 0);
+	-o-transform: translate3d(-50%, 0, 0);
+	transform: translate3d(-50%, 0, 0)
+}
+
+.droopmenu-toggle:hover i:after {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-moz-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0)
+}
+
+.droopmenu-toggle.dmt-active i {
+	-webkit-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	-moz-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	-o-transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+	transition: all 700ms cubic-bezier(0.755, 0.050, 0.855, 0.060);
+}
+
+.droopmenu-toggle.dmt-active .dm-burg:nth-child(1) {
+	-webkit-transform: translate3d(0, 8px, 0) rotate3d(0, 0, 1, -45deg);
+	-moz-transform: translate3d(0, 8px, 0) rotate3d(0, 0, 1, -45deg);
+	-ms-transform: translate3d(0, 8px, 0) rotate3d(0, 0, 1, -45deg);
+	-o-transform: translate3d(0, 8px, 0) rotate3d(0, 0, 1, -45deg);
+	transform: translate3d(0, 8px, 0) rotate3d(0, 0, 1, -45deg)
+}
+
+.droopmenu-toggle.dmt-active .dm-burg:nth-child(2) { opacity: 0; }
+.droopmenu-toggle.dmt-active .dm-burg:nth-child(3) {
+	margin-bottom: 0;
+	-webkit-transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 45deg);
+	-moz-transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 45deg);
+	-ms-transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 45deg);
+	-o-transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 45deg);
+	transform: translate3d(0, -8px, 0) rotate3d(0, 0, 1, 45deg)
+}	

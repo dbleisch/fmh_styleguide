@@ -1,0 +1,294 @@
+/**
+* tab panel widget (https://codepen.io/thierry/pen/gPoWxj)
+*/
+
+$tabs-aktiv: $color-taubenblau; // $color-fmhblau;
+$tabs-inaktiv: $color-hellblau; // $color-taubenblau;
+$tabs-hintergrund: $color-hellblau;
+$prv-hintergrund: #fafafa; // color-hellgrau
+$prv-hintergrund-1: #fcfcfc; // #f4f4f4
+$prv-hintergrund-2: #f4f4f4; // #f4f4f4
+$prv-hintergrund-3: #e4e4e4; // #f4f4f4
+$prv-hintergrund-border-icons: #999999; // #f4f4f4
+
+.editor_obj {
+	background-color: $prv-hintergrund;
+	margin-bottom: 25px;
+	&.d-gray-1 {
+		background-color: $prv-hintergrund-1;
+		border-top: 1px solid $prv-hintergrund-border-icons;
+		border-bottom: 1px solid $prv-hintergrund-border-icons;
+	}
+	&.d-gray-2 {
+		background-color: $prv-hintergrund-2;
+		border-top: 1px solid $prv-hintergrund-border-icons;
+		border-bottom: 1px solid $prv-hintergrund-border-icons;
+	}
+	&.d-gray-3 {
+		background-color: $prv-hintergrund-3;
+		border-top: 1px solid $prv-hintergrund-border-icons;
+		border-bottom: 1px solid $prv-hintergrund-border-icons;
+	}
+}
+
+.tab-panel-widget {
+
+	position: relative;
+	// containing block for headings (top:0)
+	background: transparent;
+	// labels come first in source order - we use z-index to move them in front of the headings
+	>label {
+		position: absolute;
+		z-index: 1;
+		border-right: 2px solid $prv-hintergrund;
+	}
+
+	/**
+		* labels and headings must share same values so grouping declarations in this rule prevents async edits (risk of breakage)
+		* line-height == height -> vertical centering
+		* the width dictates the offset for all headings but the first one: left offset = width * number of previous heading(s)
+		* note that width and offset of label/heading pair can be customized if necessary
+	*/
+
+	>label,
+	>h2 {
+		@extend .bt_lbl;
+		width: 9em;
+		height: 2em;
+		line-height: 1.9em;
+	}
+
+	// position:relative is for the markers (the down arrow in tabs)
+	>h2 {
+		position: relative;
+		margin: 0;
+		text-align: center;
+		background: $tabs-inaktiv;
+		color: $color-dunkelgrau;
+		border-bottom: 2px $prv-hintergrund solid;
+	}
+
+	// all first level labels and headings after the very first ones
+	>label~label,
+	>h2~h2 {
+		position: absolute;
+		top: 0;
+	}
+
+	// We target all the label/heading pairs
+	// we increment the :nth-child() params by 4 as well as the left value (according to "tab" width)
+	label:nth-child(1),
+	h2:nth-child(3) {
+		left: 0em;
+	}
+
+	label:nth-child(5),
+	h2:nth-child(7) {
+		left: 9em;
+	}
+
+	label:nth-child(9),
+	h2:nth-child(11) {
+		left: 18em;
+	}
+
+	// we visually hide all the panels
+	input+h2+div {
+		position: absolute !important;
+		clip: rect(1px, 1px, 1px, 1px);
+		padding: 0 !important;
+		border: 0 !important;
+		height: 1px !important;
+		width: 1px !important;
+		overflow: hidden;
+	}
+
+	// we reveal a panel depending on which control is selected
+	input:checked+h2+div {
+		position: static !important;
+		padding: 1em !important;
+		height: auto !important;
+		width: auto !important;
+	}
+
+	// shows a hand cursor only to pointing device users
+	label:hover {
+		cursor: pointer;
+	}
+
+	>div {
+		background: $tabs-hintergrund;
+		padding: 1em;
+	}
+
+	// we hide radio buttons and also remove them from the flow
+	input[name^="tabs"] {
+		opacity: 0;
+		position: absolute;
+	}
+
+	// this is to style the tabs when they get focus (visual cue)
+	input[name^="tabs"]:focus+h2 {
+		// outline: 1px dotted $tabs-aktiv;
+		outline-offset: 10px;
+	}
+
+	// reset of the above within the tab panel (for pointing-device users)
+	&:hover h2 {
+		outline: none !important;
+	}
+
+	// visual cue of the selection
+	input[name^="tabs"]:checked+h2 {
+		background: $tabs-aktiv;
+		color: $color-weiss;
+	}
+
+	// the marker for tabs (down arrow)
+	input[name^="tabs"]:checked+h2:after {
+		content: '';
+		margin: auto;
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid $tabs-aktiv;
+	}
+
+}
+
+/**
+								* Make it plain/simple below 45em (stack everything)
+								*/
+@media screen and (max-width: 45em) {
+
+	.tab-panel-widget {
+
+		// hide unecessary label/control pairs
+		label,
+		input[name^="tabs"] {
+			display: none;
+		}
+
+		// reveal all panels
+		>input+h2+div {
+			display: block !important;
+			position: static !important;
+			padding: 1em !important;
+			height: auto !important;
+			width: auto !important;
+		}
+
+		// "unstyle" the heading
+		h2 {
+			width: auto;
+			position: static !important;
+			background: $tabs-aktiv !important;
+		}
+
+		// "kill" the marker
+		h2:after {
+			display: none !important;
+		}
+	}
+}
+
+
+/*** monaco editor ***/
+.editor {
+	// margin-bottom: 55px;
+	display: none;
+}
+
+.editorcnt {
+	width: auto;
+	min-height: 100px;
+	height: 100%;
+	// border: 1px solid grey;
+}
+
+.editorsrc {
+	overflow: hidden;
+	height: 1px;
+}
+
+.prv {
+	position: relative;
+}
+
+.prv-wrp {
+	width: auto;
+	overflow: hidden;
+	// border-top: 1px solid $color-hellblau;
+	// border-bottom: 1px solid $color-hellblau;
+}
+
+.prv-container {
+	width: auto;
+	border: none;
+
+	/*** inhalt zoomen ***
+		-ms-zoom: 0.75;
+		-moz-transform: scale(0.75);
+		-moz-transform-origin: 0 0;
+		-o-transform: scale(0.75);
+		-o-transform-origin: 0 0;
+		-webkit-transform: scale(0.75);
+		-webkit-transform-origin: 0 0;
+	***/
+}
+
+.tgl {
+	position: absolute;
+	top: 0;
+	right: 0.5em;
+}
+
+.prv-tgl-d,
+.prv-tgl-m,
+.prv-tgl-code {
+	font-size:0.75em;
+	text-decoration: none;
+	svg {
+		height: 20px;
+		margin: 0 -1px;
+		rect, polyline, line { stroke:$prv-hintergrund-border-icons; }
+	}
+	&:hover,
+	&.act {
+		text-decoration: none;
+		svg {
+			rect, polyline, line { stroke: $color-siwf-goldgelb; }
+		}
+	}
+}
+
+.prv-tgl-code {
+	margin-left: -2px;
+}
+
+iframe {
+	border: none;
+	width: 1200px;
+	-ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.prv-container {
+	iframe {
+		min-height: 75px;
+		padding-top: 1em;
+	}
+}
+/*
+.editor{
+	height: 100%;
+}
+*/

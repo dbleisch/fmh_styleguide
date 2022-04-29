@@ -1,0 +1,41 @@
+// @import "~bootstrap/scss/bootstrap";
+$isSIWF: true;
+
+// customizing bootstrap-grid
+$grid-gutter-width: 40px;
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/utilities/embed";
+@import "~bootstrap/scss/utilities/clearfix";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/dropdown";
+
+// glide
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core"; // required core
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme"; // optional theme
+
+// magnific-popup for vimeo
+@import "~magnific-popup/src/css/main";
+
+@import "_fonts";
+@import "_icons";
+
+@import "_bootstrap_custom";
+@import "_variables";
+@import "_layout";
+@import "_startpages";
+@import "_content";
+@import "_custom-form";
+@import "_news";
+@import "_droopmenu";
+@import "_cookieconsent";
+
+@import "_contens";
+@import "_stg_tabs";
+@import "_stg_nav";
+@import "_stg_content";
+
+// div { border:dotted silver 1px; }

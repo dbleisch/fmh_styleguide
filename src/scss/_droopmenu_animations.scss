@@ -1,0 +1,38 @@
+/* FADE */
+
+// mega menu default
+.dmfade .droopmenu li > ul {
+	/* versatz beim laden */
+	-webkit-transform: translate(0, 1px);
+	-moz-transform: translate(0, 1px);
+	-ms-transform: translate(0, 1px);
+	-o-transform: translate(0, 1px);
+	transform: translate(0, 1px); 
+	
+	/* transition, fade ... */
+	-webkit-transition: transform 0.5s, visibility 0s linear 0.5s, opacity 0.5s linear, left 0s 0.5s;
+	-moz-transition: transform 0.5s, visibility 0s linear 0.5s, opacity 0.5s linear, left 0s 0.5s;
+	-o-transition: transform 0.5s, visibility 0s linear 0.5s, opacity 0.5s linear, left 0s 0.5s;
+	transition: transform 0.5s, visibility 0s linear 0.5s, opacity 0.5s linear, left 0s 0.5s;
+}
+
+// mega menu opened
+.dmfade .droopmenu li.dmopener > ul {
+	transition-delay: 0s;
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+/*
+.dmpos-bottom.dmfade .droopmenu li > ul {
+	
+	-webkit-transform: translate(0, -1px);
+	-moz-transform: translate(0, -1px);
+	-ms-transform: translate(0, -1px);
+	-o-transform: translate(0, -1px);
+	transform: translate(0, -1px);
+}
+*/

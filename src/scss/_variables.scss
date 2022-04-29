@@ -1,0 +1,435 @@
+// colors
+$body-bg: #ffffff;
+$color-weiss: #ffffff;
+$color-dunkelblau: #2e4474; 		// bg footer
+$color-fmhblau: #3c5587;    		// farbe links, buttons, bg footer, suche,mega-dropdown
+$color-taubenblau: #8a9cbd; 		// button suche, balken meta
+$color-hellblau: #e1e8f1;   		// bg breadcrumb, headerbild, linien, bg teaser (startseite)
+
+$color-schnelleinstieg: #4f6693;	// hintergrundfarbe schnelleinstieg
+
+$color-ocker: #cda028;      		// bg icons
+
+$color-fmh-goldgelb: #a0966e;		// hover/aktiv main-navi, hover/aktiv balken, hover bg icons
+$color-fmh-sandgelb: #e6dcb4;		// bg kontakt-teaser, hover teaser (parent-seite), hover link-button (in-haltsseiten)
+$color-fmh-sandgelb-light: #f1efe9; // bg aktiv fmh-seiten-wechsel (meta- navi)
+
+$color-siwf-goldgelb: #f5961e;		// hover/aktiv main-navi, hover/aktiv balken, hover bg icons
+$color-siwf-goldgelb-panel: #ffaf3c;		// hover/aktiv main-navi, hover/aktiv balken, hover bg icons
+$color-siwf-sandgelb: #ffe7c4;		// bg kontakt-teaser, hover teaser (parent-seite), hover link-button (in-haltsseiten)
+$color-siwf-sandgelb-light: #fff3e2; // bg aktiv fmh-seiten-wechsel (meta- navi)
+
+$color-dunkelgrau: #4c4c4c;			// untertitel, lead, lauftext
+$color-grau: #7f7f7f;				// mittelgrau, service navi
+$color-mediumgrau: #636363;			// mittelgrau, service navi
+$color-hellgrau: #f4f4f4; 			// bg teaser-bereich (startseite), bg link-bereich (inhaltsseiten)
+
+/*** fonts ***/
+// @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+
+$lato-regular: 'Lato', Arial, Helvetica, sans-serif !default; // 400
+$lato-bold: 'Lato', Arial, Helvetica, sans-serif; // 700
+$lato-black: 'Lato', Arial, Helvetica, sans-serif; // 900
+
+/*** body ***/
+// base body
+
+html {
+	font-size:100%;
+	// scroll-behavior: smooth; > manuell setzen wo notwenidg, da sonst die expandables nicht mehr schön scrollen
+	// overflow-y:scroll; // deny scrollbar jumping
+}
+
+html, body {
+	height: 100%;
+	font-family: $lato-regular;
+	font-size: 18px;
+	font-size: 1em;
+	line-height: 1.55em;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	color: $color-dunkelgrau;
+	// background-color: $body-bg;
+	-webkit-font-smoothing: antialiased;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+	}
+}
+
+// hide glow effect
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+// link
+a {
+	color: $color-fmhblau;
+	transition: color 0.25s;
+	text-decoration: underline;
+	border: none;
+	outline: none;
+
+	&:link, &:active, &:hover, &:focus, &:visited, &:selected {
+		border: none;
+		outline: none;
+	}
+
+	&:hover, &:focus, &.act {
+		text-decoration: underline;
+		color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+	}
+}
+
+// link icons
+@import "_linkicons";
+
+/*** text ***/
+
+p, ol, ul, .lauftxt { // lauftext, akkordeon text
+	margin-bottom: 1em;
+	font-family: $lato-regular;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+ol { // lauftext, akkordeon text
+	padding-left: 0.8em;
+	margin-left: 1em;
+	// margin-bottom: 2em;
+ 	li {
+		padding-left: 0.8em;
+		padding-left: 10px;
+		@include media-breakpoint-down(md) {
+			padding-left: 0.3em;
+		}
+		padding-bottom: 0.5em;
+		// margin-left: 0;
+		// padding-left: 0;
+	}
+}
+
+article ul { // lauftext, akkordeon text
+	padding-left: 1em;
+	margin-left: 1em;
+	// margin-bottom: 2em;
+ 	li {
+		padding-left: 0.6em;
+		@include media-breakpoint-down(md) {
+			padding-left: 0.2em;
+		}
+		padding-bottom: 0.5em;
+		list-style-type: none;
+		// margin-left: 0;
+		// padding-left: 0;
+		&:before {
+			content: if($isSIWF,"\25B6 \FE0E","•"); /* ▶ */
+			color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+			display: inline-block;
+			vertical-align: bottom;
+			font-size: if($isSIWF,0.6em,0.9em);
+			font-size: if($isSIWF,0.6em,0.9em);
+			width: if($isSIWF,2.8em,2em);
+			margin-left: if($isSIWF,-2.8em,-2em);;
+		}
+	}
+}
+
+// bold
+b, strong { font-family: $lato-bold; }
+
+.ltx, .atx { // lauftext, akkordeon text
+	font-family: $lato-regular;
+	font-size: 15px;
+	line-height: 1.467em;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+}
+
+// text
+.btx { // box text (rechte spalte)
+	font-family: $lato-regular;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+}
+
+.txt { // teaser text
+	font-family: $lato-regular;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+}
+
+.bt { // box titel
+	font-family: $lato-black;
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: $color-dunkelgrau;
+	letter-spacing: 0.05em;
+	// letter-spacing: 50;
+
+	&_lbl { // box label
+		font-family: $lato-bold;
+		font-size: 13px;
+		line-height: 13px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $color-dunkelgrau;
+		// letter-spacing: 50;
+		letter-spacing: 0.1em;
+		margin-bottom: 20px;
+	}
+}
+
+.mtx { // meta text
+	font-family: $lato-regular;
+	font-size: 13px;
+	line-height: 13px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+	// letter-spacing: 20;
+	letter-spacing: 0.02em;
+	margin-bottom:8px;
+}
+
+.lnk {
+	font-family: $lato-regular;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: $color-fmhblau;
+}
+
+/*** headlines ***/
+
+// titel seite
+h1, .ts {
+	font-family: $lato-black;
+	font-size: 31px;
+	line-height: 35px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+	letter-spacing: 0.075em;
+	// letter-spacing: 75;
+	// letter-spacing: 0.15em;
+	@include media-breakpoint-down(md) {
+		font-size: 26px;
+		line-height: 30px;
+		-moz-hyphens: auto;
+		-o-hyphens: auto;
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+	}
+}
+
+h1.ts {
+	font-family: $lato-regular;
+	font-size: 31px;
+	line-height: 35px;
+	font-weight: 400;
+	text-transform: none;
+	letter-spacing: 0;
+	color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+	@include media-breakpoint-down(md) {
+		font-size: 26px;
+		line-height: 30px;
+	}
+}
+
+h1.ta {
+	font-family: $lato-regular;
+	font-size: 31px;
+	line-height: 35px;
+	font-weight: 400;
+	text-transform: none;
+	color: $color-dunkelgrau;
+	// letter-spacing: 20;
+	@include media-breakpoint-down(md) {
+		font-size: 26px;
+		line-height: 30px;
+	}
+}
+
+// titel abschnitt
+h2, .ta {
+	font-family: $lato-regular;
+	font-size: 31px;
+	line-height: 35px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+	@include media-breakpoint-down(md) {
+		font-size: 25px;
+		line-height: 28px;
+		text-align: center;
+	}
+	// letter-spacing: 20;
+}
+
+.abschnitt h2, .nwsl h2 { text-align: left; }
+
+// titel teaser
+h3, .tt {
+	font-family: $lato-regular;
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: 400;
+	color: $color-dunkelgrau;
+	margin-bottom: 12px;
+	@include media-breakpoint-down(md) {
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+// zwischentitel
+h4, .ut {
+	font-family: $lato-black;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 900;
+	color: $color-dunkelgrau;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+/*** buttons ***/
+
+.filled, .outline {
+	position: relative;
+	// display: block;
+	display: table;
+	width: auto;
+	border: solid 2px $color-fmhblau;
+	font-size: 13px;
+	line-height:  13px;
+	font-family: $lato-regular;
+	padding: 18px 25px;
+	border-radius: 0;
+	text-decoration: none;
+
+	&.arrow:before {
+		display: block;
+		position: absolute;
+		right: -17px;
+		width: 30px; // same as padding-left set on li
+		margin-top: -5px;
+		content: "\e902";
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		font-size: 32px;
+		line-height: 24px;
+		vertical-align: middle;
+		color: if($isSIWF,$color-siwf-goldgelb,$color-fmh-goldgelb);
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	&.lnk {
+		padding-left: 57px;
+		&:before {
+			display: block;
+			position: absolute;
+			left: 17px;
+			width: 30px; // same as padding-left set on li
+			margin-top: -5px;
+			content: "\e902";
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			font-size: 32px;
+			line-height: 24px;
+			vertical-align: middle;
+			color: $color-weiss;
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+
+	&.dnl {
+		padding-left: 57px;
+		&:before {
+			display: block;
+			position: absolute;
+			left: 17px;
+			width: 30px; // same as padding-left set on li
+			margin-top: -7px;
+			content: "\e900";
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			font-size: 32px;
+			line-height: 24px;
+			vertical-align: middle;
+			color: $color-weiss;
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+
+	&:hover, &:focus {
+		outline-color: transparent;
+		outline-style: none;
+		text-decoration: none;
+		&.lnk, &.dnl {
+			&:before {
+				color: $color-fmhblau;
+			}
+		}
+	}
+}
+
+.filled {
+	background-color: $color-fmhblau;
+	color: transparent;
+	border-radius: 4px;
+	&:link, &:active, &:visited, &:not([href]):not([tabindex]) {
+		color: $color-weiss;
+	}
+	&:hover, &:focus {
+		background-color: $color-weiss;
+		color: $color-fmhblau;
+	}
+}
+
+.outline {
+	background-color: transparent;
+	color: $color-fmhblau;
+	border-radius: 4px;
+	&:link, &:active, &:visited, &:not([href]):not([tabindex]) {
+		color: $color-fmhblau;
+	}
+	&:hover, &:focus {
+		background-color: $color-fmhblau;
+		color:  $color-weiss;
+	}
+}
+
+/*** icons ***/
