@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>FMH R4 - Website Inhaltsseite Template</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="_src-r4/styles-fmh-styleguide.css">
+	<link
+			rel="stylesheet"
+			data-name="vs/editor/editor.main"
+			href="_src-r4/monaco/editor.main.css"
+		/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+</head>
+
+<body class="init">
+	<!-- navigation -->
+	<div class="fmhmenu">
+		<div class="droopmenu-boxed">
+			<div class="droopmenu-navbar dmarrow-down droopmenu-horizontal dmpos-top dmfade">
+				<div class="droopmenu-inner">
+					<div class="fmhmenu-wrp">
+						<div class="droopmenu-header">
+							<a href="../index.cfm" class="droopmenu-brand"><img src="_src-r4/img/logo_fmh@2x.png" alt="FMH" width="134"></a>
+							<a href="#" class="droopmenu-toggle"></a>
+						</div>
+						<div class="droopmenu-nav">
+							<div class="overlay"></div>
+							<div class="droopmenu-nav-wrap">
+								<div class="droopmenu-navi">
+									<ul class="droopmenu">
+										<li class="srub"><a href="#myFMH">myFMH Login<em class="droopmenu-topanim"></em></a></li>
+										<li class="srub"><a href="#Aktuelles">Aktuelles<em class="droopmenu-topanim"></em></a></li>
+										<li class="srub"><a href="#FAQ">FAQ<em class="droopmenu-topanim"></em></a></li>
+										<li class="rub droopmenu-parent droopmenu-mega" aria-haspopup="true">
+											<a href="/politik-medien.cfm" class="act" aria-expanded="false">Politik &amp; Medien</a>
+											<div class="dm-arrow"></div>
+											<ul class="droopmenu-megamenu droopmenu-grid">
+												<li class="tab-lead">
+													<div><a href="##"><span>Politik &amp; Medien Übersicht</span></a></div>
+												</li>
+												<li class="droopmenu-grid-container">
+													<div class="cf">
+														<div class="rw">
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/politik-medien/medienmitteilungen.cfm">Medienmitteilungen</a>
+																</div><!-- /nv2:2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/politik-medien/politische-geschaefte.cfm" aria-expanded="false">Politische Geschäfte<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/politik-medien/politische-geschaefte/zulassungssteuerung.cfm">Zulassungssteuerung</a></li>
+																		<li><a href="/politik-medien/politische-geschaefte/kostendaempfung-globalbudget.cfm">Kostendämpfung / Globalbudget</a></li>
+																		<li><a href="/politik-medien/politische-geschaefte/einheitliche-finanzierung.cfm">Einheitliche Finanzierung (EFAS)</a></li>
+																		<li><a href="/politik-medien/politische-geschaefte/weitere-politische-geschaefte.cfm">Weitere politische Geschäfte</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/politik-medien/sessionsempfehlungen.cfm">Sessions-Empfehlungen</a>
+																</div><!-- /nv2:2 -->
+																<div class="nv2">
+																	<a href="/politik-medien/positionspapiere.cfm">Positionspapiere</a>
+																</div><!-- /nv2:2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/politik-medien/vernehmlassungsantworten.cfm">Vernehmlassungsantworten</a>
+																</div><!-- /nv2:2 -->
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="rub droopmenu-parent droopmenu-mega" aria-haspopup="true">
+											<a href="/themen.cfm" aria-expanded="false">Themen</a>
+											<div class="dm-arrow"></div>
+											<ul class="droopmenu-megamenu droopmenu-grid">
+												<li class="tab-lead">
+													<div><a href="##"><span>Themen Übersicht</span></a></div>
+												</li>
+												<li class="droopmenu-grid-container">
+													<div class="cf">
+														<div class="rw">
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/themen/ambulante-tarife.cfm" aria-expanded="false">Ambulante Tarife<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/themen/ambulante-tarife/tarmed-tarif.cfm">TARMED: Tarif</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarmed-eingriff.cfm">TARMED: Eingriff</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarmed-vertrag-formulare.cfm">TARMED: Vertrag und Beitrittsformulare</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarmed-tarifbrowser-datenbank.cfm">TARMED: Tarifbrowser und Datenbank</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarmed-dignitaet.cfm">TARMED: Dignität</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarmed-sparten.cfm">TARMED: Sparten</a></li>
+																		<li><a href="/themen/ambulante-tarife/gesamtrevision.cfm">Gesamtrevision ambulanter Tarif</a></li>
+																		<li><a href="/themen/ambulante-tarife/ambulante-amtstarife.cfm">Ambulante Amtstarife</a></li>
+																		<li><a href="/themen/ambulante-tarife/praxislabor.cfm">Praxislabor</a></li>
+																		<li><a href="/themen/ambulante-tarife/tarifdelegierten-tag.cfm">Tarifdelegierten-Tag</a></li>
+																		<li><a href="/themen/ambulante-tarife/arbeitsgruppen.cfm">Arbeitsgruppen</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/themen/stationaere-tarife.cfm" aria-expanded="false">Stationäre Tarife<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/themen/stationaere-tarife/swissdrg.cfm">SwissDRG</a></li>
+																		<li><a href="/themen/stationaere-tarife/st-reha.cfm">ST
+																				Reha</a></li>
+																		<li><a href="/themen/stationaere-tarife/tarpsy.cfm">TARPSY</a></li>
+																		<li><a href="/themen/stationaere-tarife/begleitforschung.cfm">Begleitforschung</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/themen/mpa.cfm">MPA</a>
+																</div><!-- /nv2:2 -->
+																<div class="nv2">
+																	<a href="/themen/aerztestatistik.cfm" aria-expanded="false">Ärztestatistik<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/themen/aerztestatistik/fmh-aerztestatistik.cfm">FMH-Ärztestatistik</a></li>
+																		<li><a href="/themen/aerztestatistik/mas.cfm">MAS</a></li>
+																		<li><a href="/themen/aerztestatistik/einkommensverhaeltnisse.cfm">Einkommensverhältnisse</a></li>
+																		<li><a href="/themen/aerztestatistik/projekte.cfm">Projekte</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="/themen/qualitaet-saqm.cfm" aria-expanded="false">Qualität / SAQM<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/themen/qualitaet-saqm/saqm.cfm">SAQM</a></li>
+																		<li><a href="/themen/qualitaet-saqm/qualitaets-charta.cfm">Qualitäts-Charta SAQM</a></li>
+																		<li><a href="/themen/qualitaet-saqm/innovation-qualite.cfm">Innovation Qualité</a></li>
+																		<li><a href="/themen/qualitaet-saqm/projekte.cfm">Projekte</a></li>
+																		<li><a href="/themen/qualitaet-saqm/register.cfm">Register</a></li>
+																		<li><a href="/themen/qualitaet-saqm/guidelines.cfm">Guidelines</a></li>
+																		<li><a href="/themen/qualitaet-saqm/patientensicherheit.cfm">Patientensicherheit</a></li>
+																		<li><a href="/themen/qualitaet-saqm/publikationen.cfm">Publikationen</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/themen/ehealth.cfm" aria-expanded="false">E-Health<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/themen/ehealth/ehealth-strategie.cfm">E-Health-Strategie</a></li>
+																		<li><a href="/themen/ehealth/datenschutz.cfm">Datenschutz und -sicherheit</a></li>
+																		<li><a href="/themen/ehealth/patientendossier.cfm">Elektronisches Patientendossier</a></li>
+																		<li><a href="/themen/ehealth/telemedizin.cfm">Telemedizin</a></li>
+																		<li><a href="/themen/ehealth/praxisinformatik.cfm">Praxisinformatik</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="/themen/public-health.cfm">Public Health</a>
+																</div><!-- /nv2:2 -->
+																<div class="nv2">
+																	<a href="/themen/versorgungsforschung.cfm">Versorgungsforschung</a>
+																</div><!-- /nv2:2 -->
+																<div class="nv2">
+																	<a href="/themen/berufsentwicklung.cfm">Berufsentwicklung</a>
+																</div><!-- /nv2:2 -->
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="rub droopmenu-parent droopmenu-mega" aria-haspopup="true">
+											<a href="/dienstleistungen.cfm" aria-expanded="false">Dienstleistungen<span class="droopmenu-indicator"><em></em></span><em class="droopmenu-topanim"></em></a>
+											<div class="dm-arrow"></div>
+											<ul class="droopmenu-megamenu droopmenu-grid">
+												<li class="tab-lead">
+													<div><span>Dienstleistungen Übersicht</span></div>
+												</li>
+												<li class="droopmenu-grid-container">
+													<div class="cf">
+														<div class="rw">
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Recht<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/recht/rechtsauskuenfte.cfm">Rechtsauskünfte</a></li>
+																		<li><a href="/dienstleistungen/recht/rechtliche-grundlagen-alltag.cfm">Rechtliche
+																				Grundlagen im medizinischen Alltag</a></li>
+																		<li><a href="/dienstleistungen/recht/statuten-und-weitere-reglement.cfm">Statuten
+																				und weitere Reglemente</a></li>
+																		<li><a href="/dienstleistungen/recht/fmh-gutachterstelle.cfm">FMH-Gutachterstelle</a></li>
+																		<li><a href="/dienstleistungen/recht/patientenverfuegung.cfm">Patientenverfügung</a></li>
+																		<li><a href="/dienstleistungen/recht/empfehlungen-der-fmh.cfm">Empfehlungen
+																				der FMH</a></li>
+																		<li><a href="/dienstleistungen/recht/mustervertraege.cfm">Musterverträge</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">eHealth<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/ehealth/social-media-empfehlungen.cfm">Social-Media-Empfehlungen</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Public Health<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/public-health/prevention-for-doctors.cfm">Prevention for Doctors</a></li>
+																		<li><a href="/dienstleistungen/public-health/praeventionsdelegiertentag.cfm">Präventionsdelegiertentag</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Statistik<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/statistik/fmh-aerztestatistik.cfm">FMH-Ärztestatistik</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Qualität<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/qualitaet/saqm-newsletter.cfm">SAQM-Newsletter</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Gesundheitspolitik<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/gesundheitspolitik/fmh-flash.cfm">FMH-Flash</a></li>
+																		<li><a href="/dienstleistungen/gesundheitspolitik/mediendienst-der-fmh.cfm">Mediendienst der FMH</a></li>
+																		<li><a href="/dienstleistungen/gesundheitspolitik/schweizerische-aerztezeitung.cfm">Schweizerische Ärztezeitung</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Berufsentwicklung<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/berufsentwicklung/praxisassistenz-hausarzt.cfm">Praxisassistenz-Programm Hausarztmedizin</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Ambulante Tarife<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/ambulante-tarife/schulungen-und-kurse-fuer-aerz.cfm">Schulungen und Kurse für Ärzte</a></li>
+																		<li><a href="/dienstleistungen/ambulante-tarife/infoletter-buero-tarife.cfm">Infoletter Büro Tarife</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Stationäre  Tarife<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/stationaere-tarife/schulungen-und-kurse.cfm">Schulungen und Kurse der FMH für Ärztinnen und Ärzte</a></li>
+																		<li><a href="/dienstleistungen/stationaere-tarife/chop-dokumentationsmuster.cfm">CHOP Dokumentationsmuster</a></li>
+																		<li><a href="/dienstleistungen/stationaere-tarife/coach-my-career.cfm">Coach my Career Mentoring Programm</a></li>
+																		<li><a href="/dienstleistungen/stationaere-tarife/beratung-antragsverfahren.cfm">Beratung Antragsverfahren</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="#" class="folder" aria-expanded="false">Vernetzung und Support<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/vernetzung-und-support/mitgliedschaft.cfm">Mitgliedschaft</a></li>
+																		<li><a href="/dienstleistungen/vernetzung-und-support/health-professional-card-hpc.cfm">Health Professional Card HPC</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="/dienstleistungen/mitgliedschaft.cfm" aria-expanded="false">Mitgliedschaft<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/dienstleistungen/mitgliedschaft/vorteile-dienstleistungen.cfm">Ihre Vorteile und Dienstleistungen</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/mitglied-werden.cfm">Mitglied werden</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/health-professional-card.cfm">Health Professional Card</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/myfmh.cfm">myFMH</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/pat-bvg.cfm">PAT-BVG</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/remed.cfm">ReMed</a></li>
+																		<li><a href="/dienstleistungen/mitgliedschaft/informationen-nicht-mitglieder.cfm">Informationen für Nicht-Mitglieder</a></li>
+																	</ul><!-- /ul:1 -->
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="rub droopmenu-parent droopmenu-mega" aria-haspopup="true">
+											<a href="/ueber-die-fmh.cfm" aria-expanded="false">Über die FMH<span class="droopmenu-indicator"><em></em></span><em class="droopmenu-topanim"></em></a>
+											<div class="dm-arrow"></div>
+											<ul class="droopmenu-megamenu droopmenu-grid">
+												<li class="tab-lead">
+													<div><span>Über die FMH Übersicht</span></div>
+												</li>
+												<li class="droopmenu-grid-container">
+													<div class="cf">
+														<div class="rw">
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/portraet.cfm" aria-expanded="false">Porträt<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/ueber-die-fmh/portraet/aufgaben.cfm">Aufgaben</a></li>
+																		<li><a href="/ueber-die-fmh/portraet/strategie.cfm">Strategie</a></li>
+																		<li><a href="/ueber-die-fmh/portraet/aerzteorganisationen.cfm">Ärzteorganisationen</a></li>
+																		<li><a href="/ueber-die-fmh/portraet/geschichte.cfm">Geschichte</a></li>
+																		<li><a href="/ueber-die-fmh/portraet/termine.cfm">Termine</a></li>
+																		<li><a href="/ueber-die-fmh/portraet/mitgliederstatistik.cfm">Mitgliederstatistik</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/organisation.cfm" aria-expanded="false">Organisation<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/ueber-die-fmh/organisation/fmh-gutachterstelle.cfm">FMH-Gutachterstelle</a></li>
+																		<li><a href="/ueber-die-fmh/organisation/saqm.cfm">SAQM</a></li>
+																		<li><a href="/ueber-die-fmh/organisation/internationale-verbindungen.cfm">Internationale Verbindungen</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/statuten-reglemente.cfm">Statuten und weitere Reglemente</a>
+																</div><!-- /nv2:2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/engagement-der-fmh.cfm" aria-expanded="false">Engagement der FMH<span class="droopmenu-indicator"><em></em></span></a>
+																	<ul>
+																		<li><a href="/ueber-die-fmh/engagement-der-fmh/plattform-rettungswesen.cfm">Plattform Rettungswesen</a></li>
+																		<li><a href="/ueber-die-fmh/engagement-der-fmh/gremien-mpa.cfm">Gremien im MPA-Bereich</a></li>
+																		<li><a href="/ueber-die-fmh/engagement-der-fmh/gremien-stationaere-tarife.cfm">Gremien zu den stationären Tarifen</a></li>
+																		<li><a href="/ueber-die-fmh/engagement-der-fmh/standeskommissionen-erfa.cfm">Standeskommissionen: Erfahrungsaustausch</a></li>
+																	</ul><!-- /ul:1 -->
+																</div><!-- /nv2 -->
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/netzwerk.cfm">Netzwerk</a>
+																</div><!-- /nv2:2 -->
+															</div>
+															<div class="col-12 col-xl-3">
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/jahresberichte.cfm">Jahresberichte</a>
+																</div><!-- /nv2:2 -->
+																<div class="nv2">
+																	<a href="/ueber-die-fmh/offene-stellen.cfm">Offene Stellen</a>
+																</div><!-- /nv2:2 -->
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="srub member">
+											<a href="#Mitglied">Mitglied werden<em class="droopmenu-topanim"></em></a>
+										</li>
+										<li class="srub lang">
+											<br>
+											<a href="#" class="act">DE<em class="droopmenu-topanim"></em></a>
+											<a href="fr/index.cfm">FR<em class="droopmenu-topanim"></em></a>
+											<a href="it/index.cfm">IT<em class="droopmenu-topanim"></em></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="droopmenu-extra">
+							<ul class="droopmenu">
+								<li class="fmh-rub droop-left droopmenu-parent" aria-haspopup="true">
+									<a href="../index.cfm" class="rub" aria-expanded="false">FMH – Berufsverband<span class="droopmenu-indicator"><em></em></span><em class="droopmenu-topanim"></em></a>
+									<div class="dm-arrow"></div>
+									<ul>
+										<li><a href="../siwf/siwf.cfm" class="rub alt">SIWF – ärztliche Weiter- und Fortbildung</a></li>
+									</ul>
+								</li>
+								<li class="fmh-member"><a href="#">Mitglied werden<em class="droopmenu-topanim"></em></a></li>
+								<li class="fmh-search"><a href="#"><span class="icon-suche_icon"></span><em class="droopmenu-topanim"></em></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dm-modal-search dm-search-slidedown">
+				<div class="dm-search-overlay">&nbsp;</div>
+				<a href="#" class="dm-search-close"></a>
+				<div class="dm-search-wrapper">
+					<div class="wrp">
+						<article class="cf">
+							<div class="rw cnt_wrp inhalt">
+								<section class="col-12 col-lg-8">
+									<h1 class="ts">Suche</h1>
+									<form action="../_service/suche.cfm" class="searchform">
+										<div class="form-group">
+											<div class="input-group">
+												<input type="text" name="keyword" id="searchkeyword" placeholder="Suchbegriff" class="form-control search-field" data-channel="3" data-lang="2" data-site="200001" aria-label="Suchbegriff">
+												<div class="input-group-append">
+													<button class="btn search-btn" type="submit"><span class="icon-suche_icon"></span></button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</section>
+								<div class="col-12 col-lg-4">
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- navigation -->
+
+	<!-- header: line -->
+	<div class="hdr-ln"><div class="hdr-ln-myfmh">&nbsp;</div></div>
+
+	<!-- header: ci / service navi -->
+	<header>
+		<div class="hdrs_ln">
+			<div class="hdrs_wrp">
+				<!-- header: service navi -->
+				<div class="hdrs_rub mtx">
+					<a class="hdrs_rub_fmh act" href="/">FMH – Berufsverband</a>
+					<a class="hdrs_rub_siwf" href="/siwf">SIWF – ärztliche Weiter- und Fortbildung</a>
+					<div class="hdrs_rub_nvs">
+						<div class="menu">
+							<div class="menu-dd">
+								<a href="#" class="menu-dd_tlvl">DE &nbsp;<span>&#9660;</span></a>
+								<ul class="menu-dd_sbm">
+									<li><a href="#">FR</a></li>
+									<li><a href="#">IT</a></li>
+									<li><a href="#">EN</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="#">Aktuelles</a>
+						<a href="#">FAQ</a>
+					</div>
+					<a class="hdrs_rub_myfmh" href="#">myFMH Login</a>
+				</div>
+			</div>
+		</div>
+		<div class="hdrs_wrp">
+			<!-- header: ci / member -->
+			<div class="hdrs_ci txt">
+				<div class="rw">
+					&nbsp;
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="hdrp">
+		<div class="hdrp_wrp">
+			<div class="hdrp_path">
+				<!-- <a href="#themen">FMH</a> <span class="icon-link-arrow"></span> Themen</a> -->
+				<span class="icon-link-arrow d-xl-none reverse"></span>
+				<div class="d-none d-xl-inline">
+					<a href="#">FMH</a> <span class="icon-link-arrow d-none d-xl-inline"></span>
+				</div>
+				<div class="d-none d-xl-inline">Styleguide</div>
+
+				<div class="sharepage">
+					<div class="icons" data-url="https%3A%2F%2Fwww.fmh.ch%2Flink.pdf" data-title="Neuer%20Artikel">
+						<a class="sfb" href="#"><span class="soc-facebook"></span></a>
+						<a class="stw" href="#"><span class="soc-twitter"></span></a>
+						<a class="sln" href="#"><span class="soc-linkedin"></span></a>
+						<a class="sml fr" href="#"><span class="soc-mail"></span></a>
+					</div>
+					<span class="soc-share"></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- main content -->
+	<div class="wrp">
+		<article class="cf">
+			<div class="rw cnt_wrp inhalt">
+				<aside id="sidenav" class="col-12 col-lg-4 service">
+					<div class="toggle">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px">
+							<path d="M0 0h24v24H0z" fill="none" />
+							<path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+						</svg>
+					</div>
+					<!-- navigation links -->
+					<div class="sidenav tardoc">
+						<div class="panel open">
+							<h2><a href="#demo">A – Grundelemente</a></h2>
+							<div class="cnt">
+								<div class="link">
+									<a href="#" class="link act" aria-label="">Farben</a>
+								</div>
+								<div class="link">
+									<a href="#" class="link" aria-label="">Schriften</a>
+								</div>
+								<div class="link">
+									<a href="#" class="link" aria-label="">Formsprache UI Elemente</a>
+								</div>
+								<div class="link">
+									<a href="#" class="link" aria-label="">Bildsprache</a>
+								</div>
+								<div class="link">
+									<a href="#" class="link" aria-label="">Icons</a>
+								</div>
+							</div>
+							<div class="mob-exp">
+								<div class="more"><a href="#">+</a></div>
+								<div class="less"><a href="#">−</a></div>
+							</div>
+						</div>
+						<div class="panel">
+							<h2>B – UI Elemente</h2>
+							<div class="cnt">
+								<a class="cms-object-anchor" id="i125081" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+								<div class="link">
+									<a class="cms-object-anchor" id="i129716" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+									<a href="https://www.doctorfmh.ch/" target="_blank" class="link" aria-label="Ärzteverzeichnis">Ärzteverzeichnis</a>
+								</div>
+								<div class="link">
+									<a class="cms-object-anchor" id="i129715" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+									<a href="dienstleistungen/recht/patientenverfuegung.cfm" class="link" aria-label="Patientenverfügung">Patientenverfügung</a>
+								</div>
+								<div class="link">
+									<a class="cms-object-anchor" id="i129717" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+									<a href="ueber-die-fmh/organisation/fmh-gutachterstelle.cfm" class="link" aria-label="Gutachterstelle">Gutachterstelle</a>
+								</div>
+							</div>
+							<div class="mob-exp">
+								<div class="more"><a href="#">+</a></div>
+								<div class="less"><a href="#">−</a></div>
+							</div>
+						</div>
+					</div>
+					<!-- navigation links -->
+
+
+				</aside>
+				<div class="col-12 col-lg-8" style="min-height:600px;">
+					<div id="wikis">
+						<h1 class="ts">A Grundleistungen: Ärztlich, Nichtärztlich</h1>
+						<form action="../_service/suche.cfm" class="searchform abschnitt">
+							<div class="input-group"><input id="filtertxt" class="form-control search-field" name="q" type="text" placeholder="Suchbegriff" aria-label="Suchbegriff">
+							<div class="input-group-append"><button class="btn search-btn"><span class="icon-suche_icon"></span></button></div>
+							</div>
+						</form>
+						<div class="wikiwrp">
+							<section class="akkordeon list">
+								<div class="exp wiki">
+									<a name="i162723" class="exp-a" id="exp-i162723"></a>
+									<h3 class="ttl">Wesentliche Änderungen</h3>
+									<div class="exp-cnt">
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162724" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Fachspezifische Beratungs- und Behandlungsleistungen</h2>
+											<p>Fachspezifische Untersuchungen aus den ehemaligen Unterkapiteln 00.02.01 «<strong>Untersuchungen</strong>» und 00.02.02 «<strong>Beratungen</strong>» sowie die<strong> Zeitkredite für bestimmte Fachärzte</strong> (00.03.04) wurden aus dem Kapitel der AA «Ärztlichen allgemeine Grundleistungen» eliminiert und in teilweise neu geschaffene Kapitel umtarifiert.</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162725" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Ärztliche und nichtärztliche Grundleistungen</h2>
+											<p>Die <strong>nichtärztlichen Grundleistungen</strong> wurden von den <strong>ärztlichen Grundleistungen</strong> getrennt und in einem spezifischen Kapitel zusammengefasst (AK «Nichtärztliche Grundleistungen»). Darunter fallen beispielsweise Punktionen, Zugänge und Injektionen.</p>
+											<p>Die <strong>Knochenmarkpunktion</strong> wurde ins Kapitel JV « Medizinische Onkologie und Hämatologie» verschoben.</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162726" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Betreuungs- und Ueberwachungspositionen</h2>
+											<p>Die ärztlichen sowie nichtärztlichen Leistungen in Betreuungs- und Überwachungsstationen wurden in einem neuen Kapitel AM «Ärztliche und nichtärztliche Überwachung» zusammengefasst.</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162727" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Diagnostische und therapeutische Extraleistungen </h2>
+											<p>Die diagnostische und therapeutische Extraleistungen (00.03.03) sowie die Zeitkredite wurden aus dem Kapitel der AA «Ärztlichen allgemeine Grundleistungen» eliminiert und in teilweise neu geschaffene Kapitel umtarifiert.</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162728" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Komplementärmedizin</h2>
+											<p>Die <strong>Komplementärmedizin</strong> hat ein eigenes Kapitel erhalten: JR «Komplementärmedizin».</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162729" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Endokrinologischen Funktionsuntersuchungen</h2>
+											<p>Die<strong> endokrinologischen Funktionsuntersuchungen</strong> (00.04) sind neu über die Tarifpositionen aus dem Unterkapitel AM.05 «Spezialisierte Überwachung vor / nach Infusionen» abzurechnen.</p>
+										</div>
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162730" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Eigenblutentnahme und Plasmapherese</h2>
+											<p><strong>Eigenblutentnahme und Plasmapherese</strong> zur Autotransfusion (00.09) sind neu im Kapitel JV «Medizinische Onkologie, Hämatologie» tarifiert.</p>
+										</div>
+									</div><!-- /exp -->
+								</div>
+								<div class="exp wiki">
+									<a name="i162723" class="exp-a" id="exp-i162723"></a>
+									<h3 class="ttl">Blabla</h3>
+									<div class="exp-cnt">
+										<div class="abschnitt">
+											<a class="cms-object-anchor" id="i162724" style="height: 0px; width: 0px; border: 0; padding:0; line-height:0px;"></a>
+											<h2>Blabla</h2>
+											<p>Blabla</p>
+										</div>
+									</div><!-- /exp -->
+								</div>
+							</section><!-- /akkordeon -->
+						</div><!-- /wikiwrp -->
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+	<!-- /main content -->
+
+	<div class="ftr">
+		<div class="wrp">
+			<div class="cf">
+				<div class="rw">
+					<div class="col-12 col-lg-3">
+
+						<h4>Kontakt</h4>
+						<p>FMH Generalsekretariat<br />
+						Elfenstrasse 18, Postfach 300<br />
+						3000 Bern 15</p>
+
+						<p><b>Tel. 031 359 11 11<br />
+						Fax 031 359 11 12<br />
+						<a href="#">mail@fmh.ch</a></b></p>
+						<p><a href="#" class="link">Kontaktformular</a></p>
+
+					</div>
+					<div class="col-12 col-lg-3 lnk">
+						<h4>Nützliches</h4>
+						<p><a href="#">Downloadbereich</a></p>
+						<p><a href="#">Offene Stellen</a></p>
+						<p><a href="#">Rechtliche Informationen</a></p>
+						<p><a href="#">Geschäftsbericht 2016</a></p>
+					</div>
+					<div class="col-12 col-lg-3 lnk">
+						<h4>Externe Informationsquellen</h4>
+						<p><a href="#">doctorfmh.ch</a></p>
+						<p><a href="#">MPA Schweiz</a></p>
+						<p><a href="#">ReMed</a></p>
+						<p><a href="#">PAT-BVG</a></p>
+						<p><a href="#">Ärztestatistik</a></p>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h4>Folgen Sie uns auf Twitter</h4>
+						<a href="https://twitter.com/doctorfmh" target="_blank" class="icon-twitter" title="FMH Twitter">FMH Twitter</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ftr-b">
+		<div class="wrp">
+			<div class="cf">
+				<div class="rw">
+					<div class="col-12 col-lg-6">
+						<a href="#">Impressum</a> <a href="#">Rechtliche Informationen</a> <a href="#">Privacy Policy</a>
+					</div>
+					<div class="col-12 col-lg-6">
+						© 2017, FMH Swiss Medical Association
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts -->
+	<script src="_src-r4/app-fmh-styleguide.js"></script>
+	<script src="_src-r4/cookieconsent.min.js"></script>
+	<script>
+		/*
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-348330-2', 'fmh.ch');
+		ga('set', 'anonymizeIp', true);
+		ga('send', 'pageview');
+		*/
+		// cookie consent
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+		"palette": {
+			"popup": {
+			"background": "#e1e8f1",
+			"text": "#2e4474"
+			}
+		},
+		"content": {
+			"message": "Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Sollten Sie damit nicht einverstanden sein, können Sie die Cookie-Einstellungen in Ihrem Browser entsprechend anpassen. Weitere Informationen zu Cookies erhalten Sie in unserer",
+			"dismiss": "OK",
+			"link": "Datenschutzerklärung",
+			"href": "www.fmh.ch/_service/datenschutzerklaerung.cfm"
+		}
+	})});
+	</script>
+
+</body>
+</html>
